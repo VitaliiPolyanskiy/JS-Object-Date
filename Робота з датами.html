@@ -1,15 +1,15 @@
 ﻿<!DOCTYPE html>
 
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<html lang="uk" xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
     <meta charset="utf-8" />
-    <title>Работа с датами</title>
+    <title>Робота з датами</title>
 </head>
 
 <body>
     <script>
-        let currentDate = new Date(); // текущие дата и время
+        let currentDate = new Date(); // поточні дата та час
         document.write(currentDate + "<br />");
         let myDate = new Date("1 September 2020");
         document.write(myDate + "<br />");
@@ -18,20 +18,20 @@
         myDate = new Date(2020, 8, 1, 12, 20);
         document.write(myDate + "<br />");
 
-        let days = ["Воскресенье", "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота"];
-        let months = ["Января", "Февраля", "Марта", "Апреля", "Мая", "Июня", "Июля", "Августа", "Сентября", "Октября", "Ноября", "Декабря"];
+        let days = ["Неділя", "Понеділок", "Вівторок", "Середа", "Четвер", "П'ятниця", "Субота"];
+        let months = ["Січня", "Лютого", "Березня", "Квітня", "Травня", "Червня", "Липня", "Серпня", "Вересня", "Жовтня", "Листопада", "Грудня"];
 
         myDate = new Date();
         let h = myDate.getHours();
         let welcome = "";
         if (h >= 0 && h < 5)
-            welcome = "Доброй ночи!";
+            welcome = "Доброї ночі!";
         else if (h >= 5 && h < 12)
-            welcome = "Доброе утро!";
+            welcome = "Доброго ранку!";
         else if (h >= 12 && h < 17)
-            welcome = "Добрый день!";
+            welcome = "Доброго дня!";
         else
-            welcome = "Добрый вечер!";
+            welcome = "Доброго вечора!";
         if (h < 10)
             h = "0" + h;
         let m = myDate.getMinutes();
@@ -52,7 +52,7 @@
 
         fullDate = myDate.getDate() + " " + months[myDate.getMonth()] +
             " " + myDate.getFullYear() + ", " + days[myDate.getDay()];
-        document.write("<br /><h3>День программиста</h3>" + fullDate);
+        document.write("<br /><h3>День програміста</h3>" + fullDate);
     </script>
 </body>
 
